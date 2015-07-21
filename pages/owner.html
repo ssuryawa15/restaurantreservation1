@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome to my Restaurant</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+        </div>
+        <div>
+            <ul class="nav navbar-nav">
+                <li><a href="#" onclick="test(reservation,seating,profile, settings)">Reservations</a></li>
+                <li><a href="#" onclick="test(seating,reservation,profile, settings)">Seating</a></li>
+                <li><a href="#" onclick="test(profile,reservation,seating, settings)">Profile</a></li>
+                <li><a href="#" onclick="test(settings,reservation,seating,profile)">App settings</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="reservation" class="container">
+        <form role="form">
+            <div class="form-group">
+                <label for="search"></label>
+                <input type="text" class="form-control" id="search" placeholder="enter the guest name">
+            </div>
+            <button type="button" class="btn btn-primary">search</button>
+        </form>
+
+        <ul class="pagination">
+            <li><a href="#">1</a></li>
+            <li class="active"><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+            <li><a href="#">->></a></li>
+        </ul>
+
+        <header>Reservations</header>
+        <div class="table-responsive">
+        <table class="table">
+            <thead>
+            <tr>
+                <th>Confirmation code</th>
+                <th>Name</th>
+                <th>Date</th>
+                <th>Number of Guests</th>
+                <th>Action</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr class="info">
+                <td>123</td>
+                <td>Doe</td>
+                <td>07/19/2015</td>
+                <td>5</td>
+                <td><button type="button" class="btn btn-primary">Details</button></td>
+            </tr>
+            <tr class="info">
+                <td>444</td>
+                <td>Don</td>
+                <td>08/19/2015</td>
+                <td>3</td>
+                <td><button type="button" class="btn btn-primary">Details</button></td>
+            </tr>
+            <tr class="info">
+                <td>343</td>
+                <td>tim</td>
+                <td>07/20/2015</td>
+                <td>6</td>
+                <td><button type="button" class="btn btn-primary">Details</button></td>
+            </tr>
+            </tbody>
+        </table>
+            </div>
+
+    </div>
+
+    <div id="seating" hidden class="container">
+        <div class="table-responsive">
+        <table class="table">
+            <thead>
+            <tr>
+                <th>Table number</th>
+                <th>Size</th>
+                <th>Status</th>
+                <th>Since</th>
+                <th>Confirmation#</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr class="danger">
+                <td>1</td>
+                <td>5</td>
+                <td>available</td>
+                <td>3pm</td>
+                <td><button type="button" class="btn btn-primary">Details</button></td>
+            </tr>
+            <tr class="danger">
+                <td>4</td>
+                <td>10</td>
+                <td>busy</td>
+                <td>3pm</td>
+                <td><button type="button" class="btn btn-primary">Details</button></td>
+            </tr>
+            <tr class="danger">
+                <td>3</td>
+                <td>5</td>
+                <td>busy</td>
+                <td>3pm</td>
+                <td><button type="button" class="btn btn-primary">Details</button></td>
+            </tr>
+            </tbody>
+        </table>
+        </div>
+    </div>
+
+    <div id="profile" hidden class="container">
+        <form role="form">
+            <div class="form-group">
+                <label for="rname">Restaurant Name</label>
+                <input type="text" class="form-control" id="rname">
+            </div>
+            <div class="form-group">
+                <label for="addr">Address:</label>
+                <input type="password" class="form-control" id="addr">
+            </div>
+
+            <div class="form-group">
+                <label for="openTime">Opening time:</label>
+                <input type="time" class="form-control"  id="openTime">
+            </div>
+
+            <div class="form-group">
+                <label for="closingTime">Closing time:</label>
+                <input type="time" class="form-control" id="closingTime">
+            </div>
+            <div class="form-group">
+            <label>Autoenable?</label>
+            <label class="radio-inline"><input type="radio" name="optradio">yes</label>
+            <label class="radio-inline"><input type="radio" name="optradio">no</label>
+            </div>
+
+            <input type="submit" class="btn btn-primary" value="SAVE"> </input>
+        </form>
+    </div>
+
+    <div id="settings" hidden class="container">
+
+    </div>
+
+    <script>
+        function test(d1,d2,d3,d4)
+        {
+            d4.style.display = "none"
+            d2.style.display="none"
+            d3.style.display="none"
+            d1.style.display= "block"
+        }
+
+
+    </script>
+
+
+</nav>
+</body>
+</html>

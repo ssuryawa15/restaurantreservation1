@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome to my Restaurant</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+        </div>
+        <div>
+            <ul class="nav navbar-nav">
+                <li><a href="#" onclick="test(ownerDiv,guestDiv)">Guest</a></li>
+                <li><a href="#" onclick="test(guestDiv,ownerDiv)">Owner</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+<div id="ownerDiv" class="container" hidden>
+    <form role="form" action="owner.html">
+        <div class="form-group">
+            <label for="usr">Name:</label>
+            <input type="text" class="form-control" id="usr">
+        </div>
+        <div class="form-group">
+            <label for="pwd">Password:</label>
+            <input type="password" class="form-control" id="pwd">
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Logins" class="btn btn-info" id="sub">
+        </div>
+    </form>
+</div>
+
+<div id="guestDiv" class="container">
+    <form role="form">
+        <div class="form-group">
+            <label for="usr">Guest Name:</label>
+            <input type="text" class="form-control" id="usr">
+        </div>
+        <div class="form-group">
+            <label for="contact">Contact number:</label>
+            <input type="password" class="form-control" id="contact">
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="password" class="form-control" id="email">
+        </div>
+        <div class="form-group">
+            <label for="guests">Number of guests:</label>
+            <input type="password" class="form-control" id="guests">
+        </div>
+        <div class="form-group">
+            <label for="day">Date:</label>
+            <input type="DATE" class="form-control" id="day">
+        </div>
+        <div class="form-group">
+        <label for="time">Time:</label>
+        <input type="time" class="form-control" id="time">
+    </div>
+
+        <button type="button" class="btn btn-primary">Submit</button>
+
+        <a href="#">Cancel/Edit reservation</a>
+
+    </form>
+</div>
+
+<script>
+    function test(d1,d2)
+    {
+
+        d1.style.display="none";
+
+        d2.style.display="block";
+    }
+</script>
+</body>
+</html>
